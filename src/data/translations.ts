@@ -2,10 +2,10 @@ import { ServiceItem, ServiceArea, SampleReportData } from '../types';
 
 // Image paths from asset generation
 export const IMAGES = {
-  hero: '/src/assets/images/kai_tak_airplane_hero_1785268023439.jpg',
-  tea: '/src/assets/images/mrs_wong_enjoying_tea_1785265398800.jpg',
-  driving: '/src/assets/images/mrs_wong_driving_practice_1785268476625.jpg',
-  dimsum: '/src/assets/images/mrs_wong_dimsum_grandma_1785268715487.jpg',
+  hero: '/assets/images/kai_tak_airplane_hero_1785268023439.jpg',
+  tea: '/assets/images/mrs_wong_enjoying_tea_1785265398800.jpg',
+  driving: '/assets/images/mrs_wong_driving_practice_1785268476625.jpg',
+  dimsum: '/assets/images/mrs_wong_dimsum_grandma_1785268715487.jpg',
 };
 
 export const PHONE_NUMBER = '+1 (778) 651-2848';
