@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-serif-tc {
+    font-family: 'Source Han Serif TC', 'Noto Serif TC', 'Songti TC', 'Noto Serif CJK TC', Georgia, serif;
+  }
+  .font-serif-en {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  .font-sans-app {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  /* Chinese Heading Specification: Weight 500/600, Letter Spacing 0.06em, Line Height 1.18 */
+  .tc-heading {
+    font-family: 'Source Han Serif TC', 'Noto Serif TC', 'Songti TC', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    line-height: 1.18;
+  }
+
+  /* English & Numbers Specification: Cormorant Garamond, Weight 500/600, Letter Spacing 0.08em, Uppercase */
+  .en-heading {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* Body Text Specification: Inter, Weight 300/400, Size 17-19px, Letter Spacing 0.02em, Line Height 1.8 */
+  .body-text {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    line-height: 1.8;
+  }
+
+  /* Navigation Specification: Inter 13-15px, Uppercase, Letter Spacing 0.15em */
+  .nav-text {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+
+  /* Caption Specification: Inter 13px, Opacity 70% */
+  .caption-text {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 13px;
+    opacity: 0.7;
+    letter-spacing: 0.02em;
+  }
+
+  .hairline {
+    border: 1px solid rgba(243, 232, 210, 0.12);
+  }
+  .hairline-b {
+    border-bottom: 1px solid rgba(243, 232, 210, 0.12);
+  }
+  .hairline-t {
+    border-top: 1px solid rgba(243, 232, 210, 0.12);
+  }
+  .hairline-l {
+    border-left: 1px solid rgba(243, 232, 210, 0.12);
+  }
+  .hairline-r {
+    border-right: 1px solid rgba(243, 232, 210, 0.12);
+  }
+  .letter-spaced {
+    letter-spacing: 0.22em;
+  }
+  .bg-tungsten {
+    background: radial-gradient(circle at 70% 30%, rgba(199, 138, 59, 0.15) 0%, transparent 70%);
+  }
+}
+
+/* Film Grain Overlay */
+.film-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 40;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Vignette Overlay */
+.vignette-overlay {
+  background: radial-gradient(circle, transparent 40%, rgba(8, 8, 8, 0.85) 100%);
+  pointer-events: none;
+}
+
+/* Neon Glows */
+.neon-glow-red {
+  text-shadow: 0 0 8px rgba(255, 78, 106, 0.5), 0 0 20px rgba(139, 30, 45, 0.4);
+}
+
+.neon-glow-amber {
+  text-shadow: 0 0 10px rgba(199, 138, 59, 0.6), 0 0 25px rgba(201, 163, 94, 0.3);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+::-webkit-scrollbar-thumb {
+  background: #5E1A22;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8B1E2D;
+}
+
+/* Slow Gentle Breathing Animation */
+@keyframes ambientPulse {
+  0%, 100% { opacity: 0.25; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.03); }
+}
+
+.animate-ambient-pulse {
+  animation: ambientPulse 12s ease-in-out infinite;
+}
+
+/* Gentle Neon Flicker */
+@keyframes neonFlicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.8; }
+  94% { opacity: 1; }
+  96% { opacity: 0.9; }
+  97% { opacity: 1; }
+}
+
+.animate-neon-flicker {
+  animation: neonFlicker 8s ease-in-out infinite;
+}
+
