@@ -1,11 +1,16 @@
 import { ServiceItem, ServiceArea, SampleReportData } from '../types';
 
-// Image paths from asset generation
+import heroImg from '../assets/images/kai_tak_airplane_hero_1785268023439.jpg';
+import teaImg from '../assets/images/mrs_wong_enjoying_tea_1785265398800.jpg';
+import drivingImg from '../assets/images/mrs_wong_driving_practice_1785268476625.jpg';
+import dimsumImg from '../assets/images/mrs_wong_dimsum_grandma_1785268715487.jpg';
+
+// Image paths imported via ES modules for guaranteed Vite bundling & base path compatibility
 export const IMAGES = {
-  hero: '/assets/images/kai_tak_airplane_hero_1785268023439.jpg',
-  tea: '/assets/images/mrs_wong_enjoying_tea_1785265398800.jpg',
-  driving: '/assets/images/mrs_wong_driving_practice_1785268476625.jpg',
-  dimsum: '/assets/images/mrs_wong_dimsum_grandma_1785268715487.jpg',
+  hero: heroImg,
+  tea: teaImg,
+  driving: drivingImg,
+  dimsum: dimsumImg,
 };
 
 export const PHONE_NUMBER = '+1 (778) 651-2848';
